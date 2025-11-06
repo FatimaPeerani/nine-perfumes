@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NINE - Products</title>
+
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --accent: #c5a46d;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Arial;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 95%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      animation: fadeDown 1s ease;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .container {
+      padding: 140px 40px 60px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 50px;
+      letter-spacing: 2px;
+      animation: fadeIn 1.2s ease;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 40px;
+    }
+
+    .card {
+      border: 1px solid #222;
+      padding: 25px;
+      text-align: center;
+      background: #0f0f0f;
+      border-radius: 10px;
+      transition: 0.4s;
+      opacity: 0;
+      animation: fadeUp 1s forwards;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      border-color: var(--accent);
+      box-shadow: 0 0 20px rgba(197, 164, 109, 0.2);
+    }
+
+    .card img {
+      width: 200px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    h3 {
+      margin-top: 20px;
+      font-size: 20px;
+    }
+
+    p {
+      margin-top: 10px;
+      opacity: 0.8;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #222;
+      margin-top: 80px;
+      font-size: 14px;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 120px 20px 40px; }
+      .card img { width: 170px; height: 190px; }
+      h3 { font-size: 18px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="images/nine.png" alt="NINE Logo" style="height:50px;" />
+    <nav>
+      <a href="nine_home.html">Home</a>
+      <a href="nine_product.html">Products</a>
+      <a href="nine_about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h1>Our Premium Catalog</h1>
+
+    <div class="grid">
+      <div class="card" style="animation-delay:0.1s;">
+        <img src="images/execuro.jpg" alt="Execuro" />
+        <h3>Execuro — Eau de Parfum (For Men)</h3>
+        <p>Bold. Confident. Refined.
+          Execuro is crafted for the modern man who commands attention without saying a word. With its intense, masculine,
+          and mature aroma, this fragrance captures the essence of power and sophistication, perfect for students,
+          professionals, and achievers who strive to make a lasting impression.
+          Designed for school, college, university, and office wear, Execuro delivers 
+          an aura of authority and elegance that stays with you throughout the day. Built with 30% pure perfume oil,
+          it offers long-lasting performance, strong projection, and remarkable sillage, 
+          lasting 4–5 hours on skin and up to 10+ hours on clothes.
+          Execuro isn’t just a fragrance, it’s a statement of ambition, focus, and success</p>
+      </div>
+
+      <div class="card" style="animation-delay:0.3s;">
+        <img src="images/zephyr.jpg" alt="Zephyr" />
+        <h3>Zephyr — Eau de Parfum (For Women)</h3>
+        <p>Elegant. Confident. Irresistible.
+          Zephyr is a vibrant and captivating fragrance designed for girls and women who embody confidence, charm, and effortless grace.
+          Its fresh, floral, and sensual aroma creates a perfect balance between youthfulness and sophistication, 
+          ideal for daily wear at school, college, university, or work.
+          Crafted with 30% pure perfume oil, Zephyr offers exceptional longevity, radiant projection, and graceful sillage,
+          lasting 4–5 hours on skin and up to 8+ hours on clothes.
+          Every spray unveils a wave of feminine energy that’s both refreshing and unforgettable.
+          Zephyr isn’t just a perfume, it’s the scent of confidence, beauty, and elegance in motion.</p>
+      </div>
+
+      <div class="card" style="animation-delay:0.5s;">
+        <img src="images/deepsea.jpg" alt="Deep Sea" />
+        <h3>Deep Sea — Eau de Parfum (Unisex)</h3>
+        <p>Fresh. Powerful. Timeless.
+          Deep Sea captures the essence of freedom and confidence, a fragrance made for those who dare to stand out. With its crisp, woody,
+          and aromatic notes, it strikes the perfect balance between strength and sophistication, making it ideal for both men and women who appreciate bold yet elegant scents.
+          Crafted with 30% pure perfume oil, Deep Sea offers exceptional longevity, strong projection,
+          and lasting freshness that stays 3–4 hours on skin and up to 8+ hours on clothes. 
+          Whether it’s for daytime wear, evening events, or professional settings, this scent adapts effortlessly to every moment.
+          Deep Sea isn’t just a fragrance, it’s an attitude of confidence, depth, and unstoppable energy.</p>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 NINE Perfumes. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

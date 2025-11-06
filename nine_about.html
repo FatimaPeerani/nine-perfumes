@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NINE - About</title>
+
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --accent: #c5a46d;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Arial;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 95%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      animation: fadeDown 1s ease;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .section {
+      padding: 150px 40px 60px;
+      line-height: 1.8;
+      animation: fadeIn 1.5s ease;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+      letter-spacing: 2px;
+      text-align: center;
+      animation: fadeUp 1.2s ease;
+    }
+
+    h2 {
+      margin-top: 40px;
+      color: var(--accent);
+      animation: fadeUp 1.4s ease;
+    }
+
+    p {
+      opacity: 0.9;
+      margin-top: 10px;
+      animation: fadeUp 1.6s ease;
+    }
+
+    .contact-box {
+      margin-top: 40px;
+      border: 1px solid #222;
+      padding: 25px;
+      background: #0f0f0f;
+      border-radius: 10px;
+      animation: fadeUp 1.8s ease;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #222;
+      margin-top: 80px;
+      font-size: 14px;
+      opacity: 0;
+      animation: fadeIn 2s forwards;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 130px 20px 40px; }
+      h1 { font-size: 24px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="images/nine.png" alt="NINE Logo" style="height:50px;" />
+    <nav>
+      <a href="nine_home.html">Home</a>
+      <a href="nine_product.html">Products</a>
+      <a href="nine_about.html">About</a>
+    </nav>
+  </header>
+
+  <div class="section">
+    <h1>About NINE Perfumes</h1>
+
+    <p>
+      At NINE, we specialize in crafting premium-quality perfume clones that rival the world’s most luxurious fragrances. Each perfume is made with 30% pure oil concentration, ensuring exceptional longevity, strong projection, and impressive sillage.
+    </p>
+
+    <p>
+      We take pride in offering high-quality alternatives at wholesale prices — ideal for resellers, boutique owners, and fragrance lovers who value both performance and affordability. Our perfumes currently ship across the UK, Pakistan, Canada, and the USA, earning trust in global markets.
+    </p>
+
+    <p>
+      Experience excellence, value, and luxury — all in one bottle.
+    </p>
+
+    <h2>Contact Information</h2>
+
+    <div class="contact-box">
+      <p><strong>📍 Address:</strong><br>Office 2105, Opal Tower, Business Bay, Dubai, UAE</p>
+
+      <p><strong>🕒 Business Hours:</strong><br>
+        Monday – Friday: 10:00 AM – 8:00 PM<br>
+        Saturday – Sunday: Closed
+      </p>
+    </div>
+  </div>
+
+  <footer>
+    <p>© 2025 NINE Perfumes. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>

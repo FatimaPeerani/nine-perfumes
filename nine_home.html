@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NINE - Home</title>
+
+  <style>
+    :root {
+      --bg: #000;
+      --text: #fff;
+      --accent: #c5a46d;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Times New Roman', Arial;
+      background: var(--bg);
+      color: var(--text);
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      width: 95%;
+      top: 0;
+      left: 0;
+      z-index: 100;
+      background: rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(8px);
+      animation: fadeDown 1s ease;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    nav a:hover {
+      color: var(--accent);
+    }
+
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 0 20px;
+      animation: fadeIn 2s ease;
+    }
+
+    .hero img {
+      width: 280px;
+      opacity: 0;
+      animation: popIn 1.5s forwards;
+    }
+
+    h2 {
+      margin-top: 25px;
+      letter-spacing: 3px;
+      font-size: 18px;
+      opacity: 0;
+      animation: fadeUp 1.5s 0.5s forwards;
+    }
+
+    .btns {
+      margin-top: 45px;
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+      opacity: 0;
+      animation: fadeUp 1.5s 0.9s forwards;
+    }
+
+    .btns a {
+      padding: 15px 35px;
+      border: 1px solid #fff;
+      text-decoration: none;
+      color: #fff;
+      font-size: 16px;
+      transition: 0.3s;
+      border-radius: 40px;
+      letter-spacing: 1px;
+    }
+
+    .btns a:hover {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: #000;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      border-top: 1px solid #222;
+      margin-top: 80px;
+      font-size: 14px;
+      opacity: 0;
+      animation: fadeIn 2s 1s forwards;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes popIn {
+      0% { transform: scale(0.7); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav a { font-size: 14px; margin-left: 15px; }
+
+      .hero img { width: 200px; }
+      h2 { font-size: 14px; }
+      .btns a { font-size: 14px; padding: 12px 28px; }
+    }
+
+    @media (max-width: 480px) {
+      header { padding: 15px 20px; }
+      nav a { margin-left: 10px; }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <img src="images/nine.png" alt="NINE Logo" style="height:50px;" />
+    <nav>
+      <a href="nine_home.html">Home</a>
+      <a href="nine_product.html">Products</a>
+      <a href="nine_about.html">About</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <img src="images/nine.png" alt="NINE Logo" />
+    <h2>CONFIDENCE. ENDURANCE. PRESTIGE.</h2>
+
+    <div class="btns">
+      <a href="nine_product.html">View Catalog</a>
+      <a href="nine_about.html">Contact Sales</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 NINE Perfumes. All Rights Reserved.</p>
+  </footer>
+</body>
+</html>
